@@ -4,7 +4,7 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
-  region: eu-west-1
+  region: us-west-1
 
 functions:
   capture:
@@ -16,4 +16,4 @@ functions:
     memorySize: 1536 # RAM size for the function
     timeout: 15
     layers: # reference to the already existing layer with Chrome
-      - arn:aws:lambda:eu-west-1:764866452798:layer:chrome-aws-lambda:20
+      - arn:aws:lambda:us-west-1:764866452798:layer:chrome-aws-lambda:33

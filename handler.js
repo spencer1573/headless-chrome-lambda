@@ -1,5 +1,7 @@
 const puppeteer = require("puppeteer-core");
-const chrome = require("chrome-aws-lambda");
+// const chrome = require("chrome-aws-lambda");
+const chrome = require("@sparticuz/chromium");
+
 
 const capture = async  (event) => {
   const { queryStringParameters } = event;
@@ -31,6 +33,7 @@ const capture = async  (event) => {
   return {
     statusCode: 200,
     body: `<img src="data:image/png;base64,${screenshot}">`,
+    // body: `<div>hi</div>`,
     headers: { "Content-Type" : "text/html" }
   };
 }
